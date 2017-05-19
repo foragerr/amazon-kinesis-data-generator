@@ -271,7 +271,11 @@ function init(){
         $("#btnCreateData").prop("disabled", true);
 
         var kinesis = new AWS.Kinesis();
-        kinesis.listStreams({}, function(err, data) {
+        var params = {
+                //ExclusiveStartStreamName: 'STRING_VALUE', TODO take search string from text box
+                Limit: 10000
+        };
+        kinesis.listStreams(params, function(err, data) {
             if(err) {
                 console.log(err, err.stack);
             }
