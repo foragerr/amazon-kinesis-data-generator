@@ -273,7 +273,7 @@ function init(){
         var kinesis = new AWS.Kinesis();
         var params = {
                 //TODO take search string from text box
-                ExclusiveStartStreamName: 'perfdv', 
+                ExclusiveStartStreamName: 'perfdv2_assignment_platform', 
                 Limit: 1000
         };
         kinesis.listStreams(params, function(err, data) {
