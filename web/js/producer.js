@@ -272,8 +272,9 @@ function init(){
 
         var kinesis = new AWS.Kinesis();
         var params = {
-                //ExclusiveStartStreamName: 'STRING_VALUE', TODO take search string from text box
-                Limit: 10000
+                //TODO take search string from text box
+                ExclusiveStartStreamName: 'perfdv', 
+                Limit: 1000
         };
         kinesis.listStreams(params, function(err, data) {
             if(err) {
