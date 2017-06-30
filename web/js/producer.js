@@ -273,7 +273,7 @@ function init(){
         var kinesis = new AWS.Kinesis();
         var params = {
                 //TODO take search string from text box
-                ExclusiveStartStreamName: 'ns01_unprocessable_queue', 
+                ExclusiveStartStreamName: 'AlexYTestStream', 
                 Limit: 1000
         };
         kinesis.listStreams(params, function(err, data) {
